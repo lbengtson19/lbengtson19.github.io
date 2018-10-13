@@ -6,12 +6,12 @@
 	<title>Programs | Teens at the Bill Memorial Library</title>
 	<meta name="desription" content="Check out our upcoming programs and photos of our past programs.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsiveslides.css">
-	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsiveslides.css">
+
 	<!-- Timestamp Java Code Start -->
 	<script>
- 
+
 	function printDate() {
     var d = new Date();
     var day = d.getDate();
@@ -19,25 +19,25 @@
     var year = d.getFullYear();
     var hours = d.getHours();
     var minutes = d.getMinutes();
-     
+
     if (minutes < 10) {
         minutes = "0" + minutes;
     }
- 
+
     var suffix = "AM";
     if (hours >= 12) {
         suffix = "PM";
         hours = hours - 12;
     }
-     
+
     if (hours == 0) {
         hours = 12;
     }
    document.write("It is " + hours + ":" + minutes + " " + suffix + " on " + month + "/" + day + "/" + year);
-	} 
+	}
 	</script>
 	<!-- End Timestamp -->
-	
+
 	<!-- Slideshow Java Code Start -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
@@ -53,7 +53,9 @@
 
 <div class="contentWrapper">
 <header class="banner">
-<?php include('includes/header.php');?>
+	<img class="logoleft" src="bookheart.jpg" alt="A heart formed from the bent pages of a book">
+	<h1>Teens at the Bill Memorial Library</h1>
+	<script> printDate(); </script>
 </header>
 
 <div class="mainWrapper">
@@ -63,9 +65,9 @@
 
 <!-- Slideshow -->
 <ul class="rslides">
-	<li><img src="images/brainstorming.jpg" alt="People brainstorming ideas" width="640" height="360"></li>
-	<li><img src="images/dreambook.jpg" alt="An open book with a dog popping out" width="640" height="360"></li>
-	<li><img src="images/studying.jpg" alt="Glasses, books, and a phone" width="640" height="360"></li>
+	<li><img src="brainstorming.jpg" alt="People brainstorming ideas" width="640" height="360"></li>
+	<li><img src="dreambook.jpg" alt="An open book with a dog popping out" width="640" height="360"></li>
+	<li><img src="studying.jpg" alt="Glasses, books, and a phone" width="640" height="360"></li>
 </ul>
 <!-- Slideshow Ends -->
 
@@ -84,7 +86,7 @@
 <p>Sci Fi, Fantasy, Distopian Fiction, Oh my!  The newly formed teen Speculative Fiction bookg roup meets the first Thursday of every month in the teen room to discuss their selected title.  Good friends, good food, good reads!</p>
 
 <h3 id="afterhours">BML After Hours</h3>
-<p>Students in grades 9-12 are invitied to the brand new teen programming - after hours!  We will have the library building to ourselves from 5pm-6pm one Friday a month for crafting, food, games, and more!  <a href="contact.php">Sign up for our email list</a> to stay informed about the next After Hours program.</p>
+<p>Students in grades 9-12 are invitied to the brand new teen programming - after hours!  We will have the library building to ourselves from 5pm-6pm one Friday a month for crafting, food, games, and more!  <a href="contact.html">Sign up for our email list</a> to stay informed about the next After Hours program.</p>
 
 <h3 id="tweens">Tween Thursdays</h3>
 <p>Students in grades 6-8 are invited to Thursday night programming once a month at the Library from 6-7:30pm.  Programs include video game night, crafting, cooking classes, and more!</p>
@@ -97,20 +99,31 @@
 <h3>Past Programs</h3>
 
 <h4>Giant Game Night</h4>
-<img src="images/gamenight1.jpg" alt="A teen playing giant Jenga" class="bodyimg"><br><br>
-<img src="images/gamenight2.jpg" alt="Teens making dominoes with books" class="bodyimg"><br><br>
-<img src="images/gamenight3.jpg" alt="Teens playing Hungry Hungry Hippos with cardboard boxes" class="bodyimg">
+<img src="gamenight1.jpg" alt="A teen playing giant Jenga" class="bodyimg"><br><br>
+<img src="gamenight2.jpg" alt="Teens making dominoes with books" class="bodyimg"><br><br>
+<img src="gamenight3.jpg" alt="Teens playing Hungry Hungry Hippos with cardboard boxes" class="bodyimg">
 </aside>
-</div> <!-- Ends "mainWrapper" -->	
+</div> <!-- Ends "mainWrapper" -->
 
 <aside class="rightsidebar">
 	<nav class="primary-menu">
-		<?php include('includes/nav.php');?>
+		<ul>
+			<li> <a href="index.html">Home</a></li>
+			<li> <a href="about.html">About</a></li>
+			<li> <a href="programs.html">Programs</a></li>
+			<li> <a href="resources.html">Resources</a></li>
+			<li> <a href="contact.html">Contact</a></li>
+		</ul>
 	</nav>
 </aside>
 
 <footer class="clear">
-<?php include('includes/footer.php');?>
+	<p>Bill Memorial Library<br>
+	240 Monument Street<br>
+	Groton, CT 06340<br>
+	(860)445-0392</p>
+
+	<p class="copyright">&copy; <?php echo date("Y") ?> Bill Memorial Library</p>
 </footer>
 </div> <!-- Ends "contentWrapper" -->
 
