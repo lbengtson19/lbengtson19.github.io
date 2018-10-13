@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Programs | Teens at the Bill Memorial Library</title>
+	<meta name="desription" content="Check out our upcoming programs and photos of our past programs.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsiveslides.css">
+	
+	<!-- Timestamp Java Code Start -->
+	<script>
+ 
+	function printDate() {
+    var d = new Date();
+    var day = d.getDate();
+    var month = d.getMonth() + 1;
+    var year = d.getFullYear();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+     
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+ 
+    var suffix = "AM";
+    if (hours >= 12) {
+        suffix = "PM";
+        hours = hours - 12;
+    }
+     
+    if (hours == 0) {
+        hours = 12;
+    }
+   document.write("It is " + hours + ":" + minutes + " " + suffix + " on " + month + "/" + day + "/" + year);
+	} 
+	</script>
+	<!-- End Timestamp -->
+	
+	<!-- Slideshow Java Code Start -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+	$(function() {
+		$(".rslides").responsiveSlides();
+	});
+	</script>
+	<!-- Slideshow Java Code End -->
+</head>
+
+<body>
+
+<div class="contentWrapper">
+<header class="banner">
+<?php include('includes/header.php');?>
+</header>
+
+<div class="mainWrapper">
+
+<main>
+<h2>Programs</h2>
+
+<!-- Slideshow -->
+<ul class="rslides">
+	<li><img src="images/brainstorming.jpg" alt="People brainstorming ideas" width="640" height="360"></li>
+	<li><img src="images/dreambook.jpg" alt="An open book with a dog popping out" width="640" height="360"></li>
+	<li><img src="images/studying.jpg" alt="Glasses, books, and a phone" width="640" height="360"></li>
+</ul>
+<!-- Slideshow Ends -->
+
+<ul class="resourcesnav">
+	<li><a href="#teenfriends">Teen Friends of the Library</a></li>
+	<li><a href="#bookgroup">Speculative Fiction Book Group</a></li>
+	<li><a href="#afterhours">BML After Hours (Grades 9-12)</a></li>
+	<li><a href="#tweens">Tween Thursdays</a></li>
+	<li><a href="#studygroup">Friday Study Sessions</a></li>
+</ul>
+
+<h3 id="teenfriends">Teen Friends of the Library</h3>
+<p>The Friends of the Library work to make the Library the best it can be, and our newly formed Teen Friends group is particularly important in making that happen.  Teen Friends is open to students in grades 6-12 who want to give input into library programming, volunteer at library events, and help plan the annual Haunted Library program.  You can make a difference!  Meetings take place every other month.</p>
+
+<h3 id="bookgroup">Speculative Fiction Book Group</h3>
+<p>Sci Fi, Fantasy, Distopian Fiction, Oh my!  The newly formed teen Speculative Fiction bookg roup meets the first Thursday of every month in the teen room to discuss their selected title.  Good friends, good food, good reads!</p>
+
+<h3 id="afterhours">BML After Hours</h3>
+<p>Students in grades 9-12 are invitied to the brand new teen programming - after hours!  We will have the library building to ourselves from 5pm-6pm one Friday a month for crafting, food, games, and more!  <a href="contact.php">Sign up for our email list</a> to stay informed about the next After Hours program.</p>
+
+<h3 id="tweens">Tween Thursdays</h3>
+<p>Students in grades 6-8 are invited to Thursday night programming once a month at the Library from 6-7:30pm.  Programs include video game night, crafting, cooking classes, and more!</p>
+
+<h3 id="studygroup">Friday Study Sessions</h3>
+<p>Stargint at 3pm every Friday, the YA Room will be reserved for students in grades 6-12 who need a quiet place to study.  Students can partner up and peer tutor one another in subjects of their choice.  Bring a snack and your schoolwork!</p>
+</main>
+
+<aside class="leftsidebar">
+<h3>Past Programs</h3>
+
+<h4>Giant Game Night</h4>
+<img src="images/gamenight1.jpg" alt="A teen playing giant Jenga" class="bodyimg"><br><br>
+<img src="images/gamenight2.jpg" alt="Teens making dominoes with books" class="bodyimg"><br><br>
+<img src="images/gamenight3.jpg" alt="Teens playing Hungry Hungry Hippos with cardboard boxes" class="bodyimg">
+</aside>
+</div> <!-- Ends "mainWrapper" -->	
+
+<aside class="rightsidebar">
+	<nav class="primary-menu">
+		<?php include('includes/nav.php');?>
+	</nav>
+</aside>
+
+<footer class="clear">
+<?php include('includes/footer.php');?>
+</footer>
+</div> <!-- Ends "contentWrapper" -->
+
+</body>
+
+</html>

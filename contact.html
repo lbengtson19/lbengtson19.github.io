@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Contact | Teens at the Bill Memorial Library</title>
+	<meta name="desription" content="Contact us with any questions or if you would like to be more involved at the library.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Timestamp Java Code Start -->
+	<script>
+ 
+	function printDate() {
+    var d = new Date();
+    var day = d.getDate();
+    var month = d.getMonth() + 1;
+    var year = d.getFullYear();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+     
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+ 
+    var suffix = "AM";
+    if (hours >= 12) {
+        suffix = "PM";
+        hours = hours - 12;
+    }
+     
+    if (hours == 0) {
+        hours = 12;
+    }
+   document.write("It is " + hours + ":" + minutes + " " + suffix + " on " + month + "/" + day + "/" + year);
+	} 
+	</script>
+	<!-- End Timestamp -->
+</head>
+
+<body>
+
+<div class="contentWrapper">
+<header class="banner">
+<?php include('includes/header.php');?>
+</header>
+
+<div class="mainWrapper">
+
+<main>
+<h2>Contact Us</h2>
+<p>Please fill out the form below so that we can keep you up to date on everything you need to know!</p>
+<?php print $formMessage;?>
+<form method="post" action="index.php">
+
+<fieldset>
+
+	<legend>About You</legend>
+	
+	<label for="first_name">First Name</label>
+	<input type="text" id="first_name" name="first_name" placeholder="Doctor">
+
+	<label for="last_name">Last Name</label>
+	<input type="text" id="last_name" name="last_name" placeholder="Who">
+
+	<label for="school">School You Attend</label>
+	<input type="text" id="school" name="school" placeholder="Ridgemont High">
+
+	<label for="grade">Grade</label>
+	<select id ="grade" name="grade">
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	</select>
+	
+</fieldset>
+
+<fieldset>
+
+	<legend>Contact Info</legend>
+	
+	<label for="email">Email Address</label>
+	<input type="text" id="email" name="email" placeholder="geronimo@gmail.com">
+	
+	<label for="cell_phone">Cell Phone</label>
+	<input type="text" id ="cell_phone" name="cell_phone" placeholder="867-5309">
+	
+	<label for="parent_name">Parent or Guardian Name</label>
+	<input type="text" id="parent_name" name="parent_name" placeholder="Mama Bear">
+	
+	<label for="parent_contact">Parent or Guardian Phone Number</label>
+	<input type="text" id="parent_contact" name="parent_contact" placeholder="555-5555">
+
+</fieldset>
+
+<fieldset>
+
+	<legend>Can we email you about library events?</legend>
+	
+	<label for="email_yes" class="sidebyside">Yes</label>
+	<input type="radio" id="email_yes" name="email_subscribe" value="email_yes" checked>
+	
+	<label for="email_no" class="sidebyside">No</label>
+	<input type="radio" id="email_no" name="email_subscribe" value="email_no">
+
+</fieldset>
+
+<fieldset>	
+
+	<legend>Can we send you text reminders via Remind?</legend>
+	
+	<label for="remind_yes" class="sidebyside">Yes</label>
+	<input type="radio" id="remind_yes" name="remind_subscribe" value="remind_yes" checked>
+	
+	<label for="remind_no" class="sidebyside">No</label>
+	<input type="radio" id="remind_no" name="remind_subscribe" value="remind_no">
+	
+</fieldset>
+
+<fieldset>
+
+		<legend>We Want Your Input!</legend>
+
+		<label for="programs" class="sidebyside">What programs would you like to see at the library?</label>	
+		<textarea id="programs" name="programs" rows="3" cols="60" placeholder="e.g., Duct Tape Crafts, Escape the Room, Study Breaks"></textarea>	
+
+</fieldset>
+		
+<fieldset>
+			
+		<legend>What programs would you like to help with?</legend>
+			
+			<label for="haunted_library">Haunted Library</label>
+			<input type="checkbox" id="haunted_library" name="help_with[]" value="haunted_library">
+			
+			<label for="junior_friends">Junior Friends</label>
+			<input type="checkbox" id="junior_friends" name="help_with[]" value="junior_friends">
+			
+			<label for="volunteering">Volunteering</label>
+			<input type="checkbox" id="volunteering" name="help_with[]" value="volunteering">
+			
+			<label for="summer_reading">Summer Reading</label>
+			<input type="checkbox" id="summer_reading" name="help_with[]" value="summer_reading">
+		
+</fieldset>
+<input type="submit" value="submit">
+
+
+</form>
+</main>
+
+<aside class="leftsidebar">
+<h3>Library Hours</h3>
+	<ul class="hours">
+		<li>Monday
+			<ul><li>10am-9pm</li></ul>
+		</li>
+			
+		<li>Tuesday
+			<ul><li>10am-5pm</li></ul>
+		</li>
+		
+		<li>Wednesday
+			<ul><li>10am-5pm</li></ul>
+		</li>
+		
+		<li>Thursday
+			<ul><li>10am-9pm</li></ul>
+		</li>
+		
+		<li>Friday
+			<ul><li>10am-5pm</li></ul>
+		</li>
+		
+		<li>Saturday
+			<ul><li>10am-3pm</li></ul>
+		</li>
+		
+		<li>Sunday
+			<ul><li>CLOSED</li></ul>
+		</li>
+	</ul>
+</aside>
+</div> <!-- Ends "mainWrapper" -->	
+
+<aside class="rightsidebar">
+	<nav class="primary-menu">
+		<?php include('includes/nav.php');?>
+	</nav>
+</aside>
+
+<footer class="clear">
+<?php include('includes/footer.php');?>
+</footer>
+</div> <!-- Ends "contentWrapper" -->
+
+</body>
+
+</html>
