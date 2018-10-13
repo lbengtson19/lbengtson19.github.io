@@ -44,6 +44,7 @@
 <header class="banner">
 	<img class="logoleft" src="bookheart.jpg" alt="A heart formed from the bent pages of a book">
 	<h1>Teens at the Bill Memorial Library</h1>
+	<script> printDate(); </script>
 </header>
 
 <div class="mainWrapper">
@@ -91,12 +92,23 @@
 
 <aside class="rightsidebar">
 <nav class="primary-menu">
-		<?php include('includes/nav.php');?>
+	<ul>
+		<li> <a href="index.php">Home</a></li>
+		<li> <a href="about.php">About</a></li>
+		<li> <a href="programs.php">Programs</a></li>
+		<li> <a href="resources.php">Resources</a></li>
+		<li> <a href="contact.php">Contact</a></li>
+	</ul>
 </nav>
 </aside>
 
 <footer class="clear">
-<?php include('includes/footer.php');?></footer>
+	<p>Bill Memorial Library<br>
+	240 Monument Street<br>
+	Groton, CT 06340<br>
+	(860)445-0392</p>
+
+	<p class="copyright">&copy; <?php echo date("Y") ?> Bill Memorial Library</p>
 </div> <!-- Ends "contentWrapper" -->
 
 </body>
